@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <title>热映的电影</title>
+</head>
+<body>
+
+    <div class="container">
+        <h2 class="caption">正在热映的电影</h2>
+        <ul class="list">
+            <% for(let i=0; i<movies.length; i++){
+                let movie = movies[i];
+            %>
+                <li>
+                    <a href="<%=movie.href%>" target="_blank">
+                        <img src="<%=movie.image%>" />
+                        <p class="title"><%=movie.name%></p>
+                        <p class="score">评分：<%=movie.score%></p>
+                    </a>
+                </li>
+            <% } %>
+
+        </ul>
+    </div>
+
+</body>
+</html>
